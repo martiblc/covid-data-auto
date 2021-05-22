@@ -1,0 +1,41 @@
+# Import et analyse journaliere
+name: covid-data-auto
+
+# S'exécute tous le sjours à 20:00
+on:
+  schedule:
+    - cron:  '5 * * * *'
+
+
+jobs: 
+  covid-auto:
+    # The type of runner that the job will run on
+    runs-on: macos-latest
+
+    # Load repo and install R
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@master
+
+    # Set-up R
+    - name: Install packages
+      run: |
+        R -e 'install.packages("tidyverse")'
+        R -e 'install.packages("slider")'
+        R -e 'install.packages("lubridate")'
+
+    # Run R script
+    - name: Import-analyse
+      run: Rscript indicateurs_covid.R
+      
+ # Add new files in data folder, commit along with other modified files, push
+    - name: Commit files
+      run: |
+        git config --local user.name actions-user
+        git config --local user.email "actions@github.com"
+        git add data/*
+        git commit -am "GH ACTION Headlines $(date)"
+        git push origin main
+      env:
+        REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        username: github-actions
