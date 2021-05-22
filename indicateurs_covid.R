@@ -26,7 +26,7 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/19a91d64-3cd3-42fc-9943-d6354
   mutate(taux_incid_glissant = slider::slide_dbl(P,sum,.before=6,.after=0,.complete=TRUE)/pop*100000)%>%
   filter(jour>= "2020-09-01")%>%
   select(dep, jour, taux_incid_glissant)%>%
-  write_csv("incidence_dep.csv")
+  write_csv("data/incidence_dep.csv")
 
 ##  Positivité natio OK
 
@@ -36,7 +36,7 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/dd0de5d9-b5a5-4503-930a-7b08d
   mutate(taux_posiv_glissant = slider::slide_dbl(P,sum,.before=6,.after=0,.complete=TRUE)/slider::slide_dbl(T,sum,.before=6,.after=0,.complete=TRUE)*100) %>%
   filter(jour >= "2020-09-01") %>%
   select(jour,taux_posiv_glissant) %>%
-  write_csv("positivite_france.csv")
+  write_csv("data/positivite_france.csv")
 
 ## Positivité départements OK
 
@@ -46,7 +46,7 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78
   group_by(dep)%>%
   mutate(taux_posiv_glissant = slider::slide_dbl(P,sum,.before=6,.after=0,.complete=TRUE)/slider::slide_dbl(T,sum,.before=6,.after=0,.complete=TRUE)*100) %>%
   select(dep, jour, taux_posiv_glissant)%>%
-  write_csv("positivite_dep.csv")
+  write_csv("data/positivite_dep.csv")
 
 
 
@@ -62,7 +62,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d
   select(date, conf_j1)%>%
   arrange(date)%>%
   mutate(cas_glissant = round(slider::slide_dbl(conf_j1, sum, .before=6, .complete = TRUE)/7))%>%
-  write_csv("cas_natio.csv")
+  write_csv("data/cas_natio.csv")
 
 ## Cas positifs departements
 
@@ -74,7 +74,7 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78
   group_by(dep)%>%
   mutate(cas_glissant = round(slider::slide_dbl(P, sum, .before=6, .complete = TRUE)/7))%>%
   select(jour, dep, P, cas_glissant)%>%
-  write_csv("cas_dep.csv")
+  write_csv("data/cas_dep.csv")
 
 
 ## Hospitalisations natio (nouveaux patients hospitalisés au cours des dernières 24h) OK
@@ -86,7 +86,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d
   select(date, incid_hosp)%>%
   arrange(date)%>%
   mutate(hospit_glissant = round(slider::slide_dbl(incid_hosp, sum, .before=6, .complete = TRUE)/7))%>%
-  write_csv("hospit_natio.csv")
+  write_csv("data/hospit_natio.csv")
 
 ## Réanimations natio  (nouveaux patients admis en réa au cours des dernières 24h) OK
 
@@ -97,7 +97,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d
   select(date, incid_rea)%>%
   arrange(date)%>%
   mutate(rea_glissant = round(slider::slide_dbl(incid_rea, sum, .before=6, .complete = TRUE)/7))%>%
-  write_csv("rea_natio.csv")
+  write_csv("data/rea_natio.csv")
 
 ## Taux occupation en réanimation natio (en %) OK
 
@@ -107,7 +107,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d
                           pos_7j = col_double()))%>%
   arrange(date)%>%
   select(date, TO)%>%
-  write_csv("rea_occup_natio.csv")
+  write_csv("data/rea_occup_natio.csv")
 
 ## Taux occupation en réanimation dep (en %)
 
@@ -117,7 +117,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7
                           pos_7j = col_double()))%>%
   arrange(date)%>%
   select(date, dep, lib_dep, reg, lib_reg, TO)%>%
-  write_csv("rea_occup_dep.csv")
+  write_csv("data/rea_occup_dep.csv")
 
 
 ## Deces à l'hopital natio (au cours des dernieres 24h) OK
@@ -129,7 +129,7 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d
   select(date, incid_dchosp)%>%
   arrange(date)%>%
   mutate(deces_glissant = round(slider::slide_dbl(incid_dchosp, sum, .before=6, .complete = TRUE)/7))%>%
-  write_csv("deces_hosp_natio.csv")
+  write_csv("data/deces_hosp_natio.csv")
 
 
   
@@ -153,7 +153,7 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b-e9de-437c-af55-eda59
   mutate(doses_1_2_glissant = (dose1_glissant + dose2_glissant),
          doses_1_2 = (n_dose1 + n_dose2))%>%
   select(-fra)%>%
-  write_csv("vaccins_france.csv")
+  write_csv("data/vaccins_france.csv")
 
 
 #Test nouveau fichier avec nouveaux indicateurs et novueaux noms variables : 
@@ -172,7 +172,7 @@ vaccins_france__2 <- read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b
   mutate(doses_1_complet_glissant = (dose1_glissant + dosecomplet_glissant),
          doses_1_complet = (n_dose1 + n_complet))%>%
   select(-fra)
-  # write_csv("vaccins_france.csv")
+  # write_csv("data/vaccins_france.csv")
 
 
 ## Vaccinations natio (au moins 1 dose) par age
