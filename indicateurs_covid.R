@@ -1,9 +1,6 @@
 library(tidyverse)
 library(slider)
 library(lubridate)
-library(beepr)
-
-
 
 # INCIDENCE, POSITIVITE
 
