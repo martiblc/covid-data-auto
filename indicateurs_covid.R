@@ -161,17 +161,17 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b-e9de-437c-af55-eda59
 # n_cum_dose2 => n_cum_complet
 # couv_dose2 => couv_complet
 
-vaccins_france__2 <- read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b-e9de-437c-af55-eda5979e92fc", ";", col_types = cols(jour = col_date(format = "%Y-%m-%d")))%>%
-  arrange(jour)%>%
-  left_join(tibble("vaccin" = c(0, 1, 2, 3, 4), "nom_vaccin" = c("Tous vaccins","Pfizer/BioNTech","Moderna","AstraZeneca","Janssen")))%>%
-  group_by(vaccin)%>%
-  mutate(dose1_glissant = round(slider::slide_dbl(n_dose1, sum, .before=6, .complete=TRUE)/7),
-         dosecomplet_glissant = round(slider::slide_dbl(n_complet, sum, .before=6, .complete=TRUE)/7))%>%
-  ungroup()%>%
-  group_by(jour)%>%
-  mutate(doses_1_complet_glissant = (dose1_glissant + dosecomplet_glissant),
-         doses_1_complet = (n_dose1 + n_complet))%>%
-  select(-fra)
+# vaccins_france__2 <- read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b-e9de-437c-af55-eda5979e92fc", ";", col_types = cols(jour = col_date(format = "%Y-%m-%d")))%>%
+  # arrange(jour)%>%
+  # left_join(tibble("vaccin" = c(0, 1, 2, 3, 4), "nom_vaccin" = c("Tous vaccins","Pfizer/BioNTech","Moderna","AstraZeneca","Janssen")))%>%
+  # group_by(vaccin)%>%
+  # mutate(dose1_glissant = round(slider::slide_dbl(n_dose1, sum, .before=6, .complete=TRUE)/7),
+  #       dosecomplet_glissant = round(slider::slide_dbl(n_complet, sum, .before=6, .complete=TRUE)/7))%>%
+  #ungroup()%>%
+  #group_by(jour)%>%
+  #mutate(doses_1_complet_glissant = (dose1_glissant + dosecomplet_glissant),
+  #       doses_1_complet = (n_dose1 + n_complet))%>%
+  #select(-fra)
   # write_csv("data/vaccins_france.csv")
 
 
