@@ -4,7 +4,7 @@ name: covid-data-auto
 # S'exécute tous le sjours à 20:00
 on:
   schedule:
-    - cron:  '0 1/1 * * *'
+    - cron:  '0 18 * * *'
 
 
 jobs: 
