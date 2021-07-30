@@ -202,16 +202,6 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/b273cf3b-e9de-437c-af55-eda59
   write_csv("vaccins_france.csv")
 
 
-## VACCINATION NATIO ÂGE
-
-read_delim("https://www.data.gouv.fr/fr/datasets/r/54dd5f8d-1e2e-4ccb-8fb8-eac68245befd",";")%>%
-  arrange(jour)%>%
-  left_join(tibble("clage_vacsi" = c(0, 9, 17, 24, 29, 39, 49, 59, 64, 69, 74, 79, 80), "tranche_age" = c("Tous âges", "0-9", "10-17", "18-24", "25-29", "30-39", "40-49", "50-59", "60-64", "64-69", "70-74", "75-79", "80 et +")))%>%
-  group_by(tranche_age)%>%
-  mutate(vaccins_glissant = round(slider::slide_dbl(n_dose1, sum, .before=6, .complete = TRUE)/7))%>%
-  select(-fra)%>%
-  write_csv("vaccins_age_france.csv")
-
 ## VACCINATION DEP
 
 read_delim("https://www.data.gouv.fr/fr/datasets/r/4f39ec91-80d7-4602-befb-4b522804c0af", ";")%>%
