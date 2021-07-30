@@ -167,6 +167,17 @@ read_csv("https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7
   select(date, dep, lib_dep, reg, lib_reg, TO)%>%
   write_csv("data/rea_occup_dep.csv")
 
+## TAUX OCCUPATION REA RHONE
+
+read_csv("https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5", 
+         col_types = cols(date = col_date(format = "%Y-%m-%d"),
+                          R = col_number(), pos = col_double(),
+                          pos_7j = col_double()))%>%
+  arrange(date)%>%
+  filter(dep == 69)%>%
+  select(date, dep, TO)%>%
+  write_csv("rea_occup_rhone.csv")
+
 ## DÉCÈS HOPITAL NATIO (dernieres 24h)
 
 read_csv("https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d5e617", 
