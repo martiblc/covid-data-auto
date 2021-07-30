@@ -223,7 +223,11 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/4f39ec91-80d7-4602-befb-4b522
 
 ## VACCINATION RHONE
 
-read_csv("vaccins_dep.csv")%>%
+read_delim("https://www.data.gouv.fr/fr/datasets/r/4f39ec91-80d7-4602-befb-4b522804c0af", ";")%>%
+  arrange(jour)%>%
+  group_by(dep)%>%
+  mutate(dose1_glissant = round(slider::slide_dbl(n_dose1, sum, .before=6, .complete=TRUE)/7),
+       dosecomplet_glissant = round(slider::slide_dbl(n_complet, sum, .before=6, .complete=TRUE)/7))%>%
   filter(dep == 69)%>%
   arrange(jour)%>%
   select(jour,dose1_glissant, dosecomplet_glissant, n_dose1, n_complet)%>%
