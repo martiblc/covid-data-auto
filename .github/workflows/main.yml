@@ -1,12 +1,12 @@
 # Import et analyse journaliere
 name: covid-data-auto
 
-# S'exécute tous le sjours à 20:00
+# S'exécute tous le sjours à 20:00 '0 18 * * *'
 on:
   schedule:
-    - cron:  '0 18 * * *'
-
-
+    - cron:  '42 * * * *'
+    
+    
 jobs: 
   covid-auto:
     # The type of runner that the job will run on
