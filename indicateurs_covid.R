@@ -69,6 +69,14 @@ read_delim("https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78
   select(dep, jour, taux_incid_glissant, tranche_age)%>%
   write_csv("data/incidence_rhone_age.csv")
 
+## INCIDENCE METRO LYON
+
+read_csv("https://www.data.gouv.fr/fr/datasets/r/61533034-0f2f-4b16-9a6d-28ffabb33a02")%>%
+  filter(epci2020 == 200046977, clage_65 == 0)%>%
+  select(semaine_glissante, ti)%>%
+  mutate(date = str_sub(semaine_glissante, 12))%>%
+  write_csv("incidence_metro_lyon.csv")
+
 ##  POSITIVITÉ NATIO
 
 read_delim("https://www.data.gouv.fr/fr/datasets/r/dd0de5d9-b5a5-4503-930a-7b08dc0adc7c",";") %>%
