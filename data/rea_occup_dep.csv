@@ -65548,3 +65548,104 @@ date,dep,lib_dep,reg,lib_reg,TO
 2021-12-26,973,Guyane,03,Guyane,0.384615384615385
 2021-12-26,974,Réunion,04,Réunion,0.75
 2021-12-26,976,Mayotte,06,Mayotte,0
+2021-12-27,01,Ain,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,02,Aisne,32,Hauts-de-France,0.639269406392694
+2021-12-27,03,Allier,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,04,Alpes-de-Haute-Provence,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,05,Hautes-Alpes,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,06,Alpes-Maritimes,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,07,Ardèche,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,08,Ardennes,44,Grand Est,0.640860215053763
+2021-12-27,09,Ariège,76,Occitanie,0.715189873417722
+2021-12-27,10,Aube,44,Grand Est,0.640860215053763
+2021-12-27,11,Aude,76,Occitanie,0.715189873417722
+2021-12-27,12,Aveyron,76,Occitanie,0.715189873417722
+2021-12-27,13,Bouches-du-Rhône,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,14,Calvados,28,Normandie,0.379166666666667
+2021-12-27,15,Cantal,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,16,Charente,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,17,Charente-Maritime,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,18,Cher,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,19,Corrèze,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,21,Côte-d'Or,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,22,Côtes-d'Armor,53,Bretagne,0.388888888888889
+2021-12-27,23,Creuse,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,24,Dordogne,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,25,Doubs,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,26,Drôme,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,27,Eure,28,Normandie,0.379166666666667
+2021-12-27,28,Eure-et-Loir,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,29,Finistère,53,Bretagne,0.388888888888889
+2021-12-27,2A,Corse-du-Sud,94,Corse,1.16666666666667
+2021-12-27,2B,Haute-Corse,94,Corse,1.16666666666667
+2021-12-27,30,Gard,76,Occitanie,0.715189873417722
+2021-12-27,31,Haute-Garonne,76,Occitanie,0.715189873417722
+2021-12-27,32,Gers,76,Occitanie,0.715189873417722
+2021-12-27,33,Gironde,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,34,Hérault,76,Occitanie,0.715189873417722
+2021-12-27,35,Ille-et-Vilaine,53,Bretagne,0.388888888888889
+2021-12-27,36,Indre,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,37,Indre-et-Loire,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,38,Isère,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,39,Jura,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,40,Landes,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,41,Loir-et-Cher,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,42,Loire,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,43,Haute-Loire,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,44,Loire-Atlantique,52,Pays de la Loire,0.513812154696133
+2021-12-27,45,Loiret,24,Centre-Val de Loire,0.583333333333333
+2021-12-27,46,Lot,76,Occitanie,0.715189873417722
+2021-12-27,47,Lot-et-Garonne,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,48,Lozère,76,Occitanie,0.715189873417722
+2021-12-27,49,Maine-et-Loire,52,Pays de la Loire,0.513812154696133
+2021-12-27,50,Manche,28,Normandie,0.379166666666667
+2021-12-27,51,Marne,44,Grand Est,0.640860215053763
+2021-12-27,52,Haute-Marne,44,Grand Est,0.640860215053763
+2021-12-27,53,Mayenne,52,Pays de la Loire,0.513812154696133
+2021-12-27,54,Meurthe-et-Moselle,44,Grand Est,0.640860215053763
+2021-12-27,55,Meuse,44,Grand Est,0.640860215053763
+2021-12-27,56,Morbihan,53,Bretagne,0.388888888888889
+2021-12-27,57,Moselle,44,Grand Est,0.640860215053763
+2021-12-27,58,Nièvre,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,59,Nord,32,Hauts-de-France,0.639269406392694
+2021-12-27,60,Oise,32,Hauts-de-France,0.639269406392694
+2021-12-27,61,Orne,28,Normandie,0.379166666666667
+2021-12-27,62,Pas-de-Calais,32,Hauts-de-France,0.639269406392694
+2021-12-27,63,Puy-de-Dôme,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,64,Pyrénées-Atlantiques,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,65,Hautes-Pyrénées,76,Occitanie,0.715189873417722
+2021-12-27,66,Pyrénées-Orientales,76,Occitanie,0.715189873417722
+2021-12-27,67,Bas-Rhin,44,Grand Est,0.640860215053763
+2021-12-27,68,Haut-Rhin,44,Grand Est,0.640860215053763
+2021-12-27,69,Rhône,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,70,Haute-Saône,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,71,Saône-et-Loire,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,72,Sarthe,52,Pays de la Loire,0.513812154696133
+2021-12-27,73,Savoie,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,74,Haute-Savoie,84,Auvergne et Rhône-Alpes,0.817531305903399
+2021-12-27,75,Paris,11,Île-de-France,0.557105492589364
+2021-12-27,76,Seine-Maritime,28,Normandie,0.379166666666667
+2021-12-27,77,Seine-et-Marne,11,Île-de-France,0.557105492589364
+2021-12-27,78,Yvelines,11,Île-de-France,0.557105492589364
+2021-12-27,79,Deux-Sèvres,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,80,Somme,32,Hauts-de-France,0.639269406392694
+2021-12-27,81,Tarn,76,Occitanie,0.715189873417722
+2021-12-27,82,Tarn-et-Garonne,76,Occitanie,0.715189873417722
+2021-12-27,83,Var,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,84,Vaucluse,93,Provence-Alpes-Côte d'Azur,1
+2021-12-27,85,Vendée,52,Pays de la Loire,0.513812154696133
+2021-12-27,86,Vienne,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,87,Haute-Vienne,75,Nouvelle Aquitaine,0.601941747572815
+2021-12-27,88,Vosges,44,Grand Est,0.640860215053763
+2021-12-27,89,Yonne,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,90,Territoire de Belfort,27,Bourgogne et Franche-Comté,0.737373737373737
+2021-12-27,91,Essonne,11,Île-de-France,0.557105492589364
+2021-12-27,92,Hauts-de-Seine,11,Île-de-France,0.557105492589364
+2021-12-27,93,Seine-Saint-Denis,11,Île-de-France,0.557105492589364
+2021-12-27,94,Val-de-Marne,11,Île-de-France,0.557105492589364
+2021-12-27,95,Val-d'Oise,11,Île-de-France,0.557105492589364
+2021-12-27,971,Guadeloupe,01,Guadeloupe,0.185185185185185
+2021-12-27,972,Martinique,02,Martinique,1.46153846153846
+2021-12-27,973,Guyane,03,Guyane,0.538461538461538
+2021-12-27,974,Réunion,04,Réunion,0.807692307692308
+2021-12-27,976,Mayotte,06,Mayotte,0.166666666666667
